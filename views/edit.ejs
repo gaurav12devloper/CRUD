@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-sm-6  bg-light p-5 offset-sm-3 shadow-lg">
+            <h1 class="text-center p-2 bg-info">Update student</h1>
+            <form action="/student/update/<%=data._id %> " method="post">
+                 <div class="form-group m-2">
+                    <label for="name">Name</label>
+                    <input type="text" value="<%= data.name %>"  class="form-control" name="name">
+                 </div> 
+                  <div class="form-group m-2">
+                    <label for="age">Age</label>
+                    <input type="text" value="<%= data.age %>" class="form-control" name="age">
+                 </div>
+                 <div class="form-group m-2">
+                    <label for="fees">Fees</label>
+                    <input type="text" value="<%= data.fees %>" class="form-control" name="fees">
+                 </div>
+                 <button type="submit" class="btn border-info m-2">Update</button>
+                 <button class="btn border-info m-2"><a href="/student">Back to Home</a></button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') %>
